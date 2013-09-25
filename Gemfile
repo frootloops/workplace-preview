@@ -2,10 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'airbrake'
 gem 'bourbon'
 gem 'coffee-rails'
-gem 'delayed_job_active_record', '>= 4.0.0'
 gem 'email_validator'
 gem 'flutie'
 gem 'high_voltage'
