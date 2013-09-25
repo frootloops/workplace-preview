@@ -2,21 +2,24 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'bourbon'
-gem 'coffee-rails'
-gem 'email_validator'
-gem 'flutie'
-gem 'high_voltage'
-gem 'jquery-rails'
-gem 'neat'
-gem 'pg'
-gem 'rack-timeout'
+# Core
 gem 'rails', '>= 4.0.0'
+gem 'pg'
+gem 'unicorn'
+gem 'email_validator'
+gem 'high_voltage'
+gem 'rack-timeout'
 gem 'recipient_interceptor'
-gem 'sass-rails'
-gem 'simple_form'
 gem 'uglifier'
-gem 'puma'
+
+# Assets
+gem 'sass-rails'
+gem 'jquery-rails'
+gem 'coffee-rails'
+gem 'haml-rails'
+gem 'simple_form'
+gem 'bourbon'
+gem 'neat'
 
 group :development do
   gem 'better_errors'
@@ -42,5 +45,4 @@ end
 group :staging, :production do
   gem 'newrelic_rpm', '>= 3.6.7'
   gem 'rails_12factor'
-  gem 'unicorn'
 end
