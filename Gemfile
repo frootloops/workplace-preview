@@ -16,7 +16,7 @@ gem 'recipient_interceptor'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
-gem 'unicorn'
+gem 'puma'
 
 group :development do
   gem 'better_errors'
