@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
   as_enum :gender, [:female, :male]
 
   has_many :providers, dependent: :destroy
+
+  def admin?
+    true
+  end
 end
