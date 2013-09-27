@@ -17,3 +17,11 @@ build:
       - script:
           name: rspec
           code: bundle exec rspec
+deploy:
+    steps:
+        - heroku-deploy
+    after-steps:
+        - campfire-notify:
+            token: $CAMPFIRE_TOKEN
+            room-id: 575675
+            subdomain: integrator2
