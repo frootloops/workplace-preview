@@ -11,6 +11,8 @@ gem 'high_voltage'
 gem 'rack-timeout'
 gem 'recipient_interceptor'
 gem 'uglifier'
+gem 'simple_enum'
+gem 'devise'
 
 # Assets
 gem 'sass-rails'
