@@ -22,9 +22,10 @@ gem 'bourbon'
 gem 'neat'
 
 group :development do
-  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'foreman'
+  gem 'guard', '>= 2.0.0.pre.3'
+  gem 'guard-rspec'
 end
 
 group :development, :test do
