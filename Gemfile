@@ -13,6 +13,7 @@ gem 'recipient_interceptor'
 gem 'uglifier'
 gem 'simple_enum'
 gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Assets
 gem 'sass-rails'
