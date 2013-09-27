@@ -1,15 +1,13 @@
 require 'spec_helper'
 
 feature "User" do
-
+  let(:user) { create(:client, password: "secret42") }
   scenario "can sign in" do
-    user = create(:user, email: "old_user@example.com", password: "1111111111")
     visit root_path
     click_link I18n.t("devise.sign_in")
-    fill_in "user_email", with: "old_user@example.com"
-    fill_in "user_password", with: "1111111111"
+    fill_in "user_email", with: user.email
+    fill_in "user_password", with: "secret42"
     click_button "Sign in"
-    expect(page).to have_content "old_user@example.com"
+    expect(page).to have_content user.email
   end
-
 end
