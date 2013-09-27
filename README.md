@@ -1,5 +1,5 @@
 
-# Workplace app [ ![Codeship Status for IntegratorLLC/core](https://www.codeship.io/projects/6c71dde0-08ec-0131-9d0a-0278930b9bbc/status?branch=master)](https://www.codeship.io/projects/7409)
+# Workplace app [![wercker status](https://app.wercker.com/status/c6027d2bda464e214cfa5b04061666e1 "wercker status")](https://app.wercker.com/project/bykey/c6027d2bda464e214cfa5b04061666e1)
 
 You look great in Suspenders
 ============================
