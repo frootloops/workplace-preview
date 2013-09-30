@@ -10,7 +10,7 @@ feature "User" do
     OmniAuth.config.mock_auth[:facebook] = build(:facebook_omniauth)
     visit root_path
     click_link I18n.t("devise.sign_in")
-    click_link "Sign in with Facebook"
+    click_link I18n.t("devise.sign_in_with_provider", provider: "Facebook")
     expect(page).to have_content "user@facebook.com"
   end
 
@@ -18,9 +18,9 @@ feature "User" do
     OmniAuth.config.mock_auth[:twitter] = build(:twitter_omniauth)
     visit root_path
     click_link I18n.t("devise.sign_in")
-    click_link "Sign in with Twitter"
+    click_link I18n.t("devise.sign_in_with_provider", provider: "Twitter")
     fill_in "user_email", with: "new_user@example.com"
-    click_button "Sign up"
+    click_button I18n.t("devise.sign_up")
     expect(page).to have_content "new_user@example.com"
   end
 

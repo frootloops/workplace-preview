@@ -33,6 +33,7 @@ module Workplace
     config.autoload_paths += [ Rails.root.join("app/models/factories"),
                                Rails.root.join("app/models/abilities") ]
 
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*', '*.{rb,yml}')]
     config.i18n.default_locale = :ru
     config.i18n.fallbacks = [:ru]
   end
