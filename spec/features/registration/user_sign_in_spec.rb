@@ -7,7 +7,7 @@ feature "User" do
     click_link I18n.t("devise.sign_in")
     fill_in "user_email", with: user.email
     fill_in "user_password", with: "secret42"
-    click_button "Sign in"
+    click_button I18n.t("devise.sign_in")
     expect(page).to have_content user.email
   end
 end
