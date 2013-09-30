@@ -11,8 +11,18 @@ FactoryGirl.define do
     factory :admin do
       role :admin
     end
-
     factory :client
     factory :guest
+
+    ignore do
+      facebook false
+      twitter false
+    end
+
+    after(:create) do |user, evaluator|
+      user.providers.create(name: 'facebook', uid: '12345') if evaluator.facebook
+      user.providers.create(name: 'twitter', uid: '12345') if evaluator.twitter
+    end
+
   end
 end

@@ -15,6 +15,11 @@ gem 'simple_enum'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'cancan'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'activerecord-session_store'
+gem 'rails_config'
 
 # Assets
 gem 'sass-rails'
@@ -33,6 +38,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'pry'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '>= 2.14'
   gem 'thin'
