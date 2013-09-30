@@ -12,7 +12,7 @@ FactoryGirl.define do
       role :admin
     end
 
-    factory :client do
-    end
+    factory :client
+    factory :guest
   end
 end

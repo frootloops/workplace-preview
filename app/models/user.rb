@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  alias_method :guest?, :new_record?
+
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
          :trackable, :validatable
 
