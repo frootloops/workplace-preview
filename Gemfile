@@ -14,6 +14,7 @@ gem 'uglifier'
 gem 'simple_enum'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'cancan'
 
 # Assets
 gem 'sass-rails'
