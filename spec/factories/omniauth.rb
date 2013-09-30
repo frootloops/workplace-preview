@@ -4,6 +4,7 @@ FactoryGirl.define do
     uid "12345"
     info { { name: "Bob Marley" } }
   end
+
   factory :facebook_omniauth, class: OmniAuth::AuthHash do
     provider "facebook"
     uid "12345"
