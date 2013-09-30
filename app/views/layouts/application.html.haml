@@ -23,11 +23,8 @@
         %a.navbar-brand(href="#") Workplace
         .nav-collapse
           %ul.nav.navbar-nav
-            %li= link_to "Link 1", "/path1"
-            %li= link_to "Link 2", "/path2"
-            %li= link_to "Link 3", "/path3"
-            %li= link_to "Link 3", "/path3"
             %li= render "application/user_menu"
+          = render "shared/admin_menu" if can? :manage, :all
 
     .container
       .row
