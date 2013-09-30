@@ -1,0 +1,10 @@
+omniauth:
+  available_providers:
+    - twitter
+    - facebook
+  twitter:
+    api_key: "dwztXJvJyoqhtzgZ5a91A"
+    api_secret: "6llqn7eB6P2BU2fWGpnpZ4D9F5LyHVJ8Sord5eFFc"
+  facebook:
+    api_key: "204775779702016"
+    api_secret: "3c1333b2f859d969dbb51973501b85eb"
