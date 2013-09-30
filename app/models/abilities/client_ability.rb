@@ -1,0 +1,2 @@
+class ClientAbility < Ability
+end
