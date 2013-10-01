@@ -1,0 +1,14 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %td= Place.human_attribute_name(:name)
+      %td= Place.human_attribute_name(:address)
+      %td= Place.human_attribute_name(:area)
+      %td= Place.human_attribute_name(:opening_hours)
+  %tbody
+    - @places.each do |place|
+      %tr
+        %td= place.name
+        %td= place.address
+        %td= place.area
+        %td= place.opening_hours
