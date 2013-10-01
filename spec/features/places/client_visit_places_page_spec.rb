@@ -1,5 +1,6 @@
 require 'spec_helper'
 
-describe "Client visit places page" do
+feature "Client" do
+  background { login_as create(:client) }
   it_behaves_like "visit place page"
 end

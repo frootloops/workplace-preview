@@ -1,0 +1,9 @@
+= simple_form_for @place do |f|
+  = f.input :name
+  = f.input :address
+  = f.input :area
+  = f.input :opening_hours
+  = f.input :status_cd
+  = f.association :city
+
+  = f.submit
