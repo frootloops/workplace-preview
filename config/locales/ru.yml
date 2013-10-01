@@ -13,3 +13,6 @@ ru:
   back: Назад
   access:
     denied: Доступ запрещен
+  errors:
+    messages:
+      blank: Поле не может быть пустым

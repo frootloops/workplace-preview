@@ -1,0 +1,11 @@
+ru:
+  helpers:
+    submit:
+      place:
+        create: Созать новую точку
+        update: Изменить точку
+  views:
+    places:
+      controls:
+        new: Создать Точку
+        destroy: Удалить
