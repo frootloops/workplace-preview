@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   as_enum :role, [:client, :admin]
 
   has_many :providers, dependent: :destroy
+  has_many :places, foreign_key: :owner_id, dependent: :destroy
 
   def password_required?
     (providers.empty? || password.present?) && super
