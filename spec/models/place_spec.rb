@@ -12,4 +12,13 @@ describe Place do
   
   it { should validate_presence_of(:city) }
   it { should validate_presence_of(:owner) }
+
+  describe "default values" do
+    subject { Place.new }
+    it { expect(subject.status).to eql(:draft) }
+  end
+
+  describe ".statuses" do
+    it { expect(Place.statuses).to eql({ draft: 0, open: 2, preview: 1 }) }
+  end
 end

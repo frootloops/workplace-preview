@@ -1,5 +1,11 @@
 ru:
   activerecord:
+    enums:
+      place:
+        statuses:
+          draft: Черновик
+          preview: Предварительная запись
+          open: Открыта
     models:
       place: Точки
     attributes:

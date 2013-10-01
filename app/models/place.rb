@@ -4,4 +4,6 @@ class Place < ActiveRecord::Base
 
   belongs_to :city
   belongs_to :owner, class_name: :User
+
+  as_enum :status, [:draft, :preview, :open]
 end
