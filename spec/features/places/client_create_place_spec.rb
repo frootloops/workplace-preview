@@ -17,7 +17,6 @@ feature "Client" do
       fill_in 'place_address', with: tmp_place.address
       fill_in 'place_area', with: tmp_place.area
       fill_in 'place_opening_hours', with: tmp_place.opening_hours
-      fill_in 'place_status_cd', with: tmp_place.status_cd
 
       select city.name, from: "place_city_id"
     end
@@ -33,6 +32,5 @@ feature "Client" do
 
     click_button I18n.t("helpers.submit.place.create")
     expect(page).to have_content(I18n.t("errors.messages.blank"))
-
   end
 end
