@@ -1,5 +1,6 @@
 class ClientAbility < Ability
   def main
+    super
     place
     user_ability
   end
