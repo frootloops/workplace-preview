@@ -20,6 +20,11 @@ class PlacesController < ApplicationController
   end
 
   def update
+    if @place.update_attributes place_params
+      redirect_to places_path
+    else
+      render "edit"
+    end
   end
 
   def destroy
@@ -33,6 +38,6 @@ class PlacesController < ApplicationController
   private
 
   def place_params
-    params.require(:place).permit(:name, :address, :area, :opening_hours, :status_cd, :city_id)
+    params.require(:place).permit(:name, :address, :area, :opening_hours, :status, :city_id)
   end
 end
