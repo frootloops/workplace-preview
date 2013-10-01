@@ -1,0 +1,11 @@
+ru:
+  activerecord:
+    models:
+      place: Точки
+    attributes:
+      place:
+        name: Название
+        address: Адрес
+        area: Площадь
+        opening_hours: Часы работы
+        status: Состояние
