@@ -10,3 +10,6 @@ ru:
       date: '%b %-d, %Y'
       short: '%B %d'
       long: '%a, %b %-d, %Y at %r'
+  back: Назад
+  access:
+    denied: Доступ запрещен

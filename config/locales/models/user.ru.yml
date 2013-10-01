@@ -8,3 +8,13 @@ ru:
         password: Пароль
         remember_me: Запомнить меня
         password_confirmation: Повторите пароль
+        current_password: Текущий пароль
+        name: Имя
+    errors:
+      models:
+        user:
+          attributes:
+            current_password:
+              blank: Укажите текущий пароль
+            email:
+              taken: Email уже занят
