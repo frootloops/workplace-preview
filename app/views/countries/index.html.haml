@@ -1,0 +1,10 @@
+= link_to t("views.country.controls.new"), new_country_path, class: "btn btn-default"
+%table.table.table-striped
+  %thead
+    %tr
+      %td= Country.human_attribute_name(:name)
+  %tbody
+    - @countries.each do |country|
+      %tr
+        %td= link_to country.name, edit_country_path(country)
+        %td= link_to t("views.country.controls.destroy"), country, method: :delete
