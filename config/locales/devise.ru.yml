@@ -7,6 +7,8 @@ ru:
     didnt_receive_confirmation_instructions: Не получили подтверждение?
     didnt_receive_unlock_instructions: Не получили инструкции по восстановлению учетной записи?
     sign_in_with_provider: "Войти с помощью %{provider}"
+    edit_registration: Редактировать учетную запись
+    cancel_account: Удалить аккаунт
     confirmations:
       confirmed: "Ваша учётная запись подтверждена. Теперь вы вошли в систему."
       send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по подтверждению вашей учётной записи."

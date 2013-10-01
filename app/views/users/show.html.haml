@@ -1,0 +1,4 @@
+.row
+  .span6= @user.email
+  .span6= @user.name
+  = link_to t("devise.edit_registration"), edit_user_registration_path
