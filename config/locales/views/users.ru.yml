@@ -3,3 +3,8 @@ ru:
     submit:
       user:
         update: Сохранить
+  users:
+    providers:
+      index: Социальные сети
+      destroy: "Удалить %{provider}"
+      add: "Добавить %{provider}"

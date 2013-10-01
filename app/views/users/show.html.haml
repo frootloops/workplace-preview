@@ -1,4 +1,12 @@
-.row
+.row-fluid
   .span6= @user.email
   .span6= @user.name
   = link_to t("devise.edit_registration"), edit_user_registration_path
+.row-fluid
+  .span
+    %h4= t("users.providers.index")
+  .span6
+    - @user.providers.each do |provider|
+      %p= provider.decorate.link_to_destroy
+    - @user.available_providers.each do |provider|
+      %p= link_to_add_provider(provider)

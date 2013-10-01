@@ -17,4 +17,10 @@ describe User do
     let(:user) { User.new }
     it { expect(user.role).to eql(:client) }
   end
+
+  describe "#available_providers" do
+    it "return array of available providers" do
+      expect(create(:user, facebook: true).available_providers).to eq ["twitter"]
+    end
+  end
 end
