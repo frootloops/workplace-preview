@@ -18,6 +18,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'activerecord-session_store'
 gem 'rails_config'
+gem 'draper'
 
 # Assets
 gem 'sass-rails'

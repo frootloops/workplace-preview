@@ -3,6 +3,7 @@ class ClientAbility < Ability
     super
     place
     user_ability
+    provider
   end
 
   private
@@ -14,6 +15,11 @@ class ClientAbility < Ability
 
   def user_ability
     can :show, User, id: user.id
+  end
+
+  def provider
+    can :create, Provider
+    can :destroy, Provider, user_id: user.id
   end
 
 end

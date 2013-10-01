@@ -22,4 +22,8 @@ class User < ActiveRecord::Base
       super
     end
   end
+
+  def available_providers
+    Settings.omniauth.available_providers - providers.pluck(:name)
+  end
 end

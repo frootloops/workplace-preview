@@ -25,4 +25,10 @@ describe ClientAbility do
     it { should_not be_able_to(:show, build(:user)) }
   end
 
+  context Provider do
+    it { should be_able_to(:create, Provider) }
+    it { should be_able_to(:destroy, build(:provider, user: client)) }
+    it { should_not be_able_to(:destroy, build(:provider)) }
+  end
+
 end

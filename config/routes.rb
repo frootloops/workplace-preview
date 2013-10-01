@@ -3,5 +3,6 @@ Workplace::Application.routes.draw do
                                     registrations: "users/registrations" }
   resources :places
   resources :users, only: :show
+  resources :providers, only: [:create, :destroy]
   root to: "home#index"
 end
