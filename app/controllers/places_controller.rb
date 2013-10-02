@@ -15,15 +15,15 @@ class PlacesController < ApplicationController
     if @place.save
       redirect_to places_path
     else
-      render "new"
+      render :new
     end
   end
 
   def update
-    if @place.update_attributes place_params
+    if @place.update place_params
       redirect_to places_path
     else
-      render "edit"
+      render :edit
     end
   end
 

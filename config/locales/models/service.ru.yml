@@ -1,0 +1,17 @@
+ru:
+  activerecord:
+    enums:
+      service:
+        profiles:
+          hairdresser: Парикмахер
+          piercing: Пирсинг
+          tailor: Портной
+          tattoo: Тату
+          visagist: Визажист
+    models:
+      service: Услуги
+    attributes:
+      service:
+        name: Название
+        description: Описание
+        profile: Профиль

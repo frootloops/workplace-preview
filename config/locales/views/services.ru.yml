@@ -1,0 +1,11 @@
+ru:
+  helpers:
+    submit:
+      service:
+        create: Созать новую услугу
+        update: Изменить услугу
+  views:
+    service:
+      controls:
+        new: Создать Услугу
+        destroy: Удалить
