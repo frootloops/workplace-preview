@@ -1,0 +1,12 @@
+= link_to t("views.city.controls.new"), new_city_path, class: "btn btn-default"
+%table.table.table-striped
+  %thead
+    %tr
+      %td= City.human_attribute_name(:name)
+      %td= City.human_attribute_name(:country)
+  %tbody
+    - @cities.each do |city|
+      %tr
+        %td= link_to city.name, edit_city_path(city)
+        %td= city.country.name
+        %td= link_to t("views.city.controls.destroy"), city, method: :delete
