@@ -1,0 +1,11 @@
+ru:
+  helpers:
+    submit:
+      city:
+        create: Добавить
+        update: Сохранить
+  views:
+    city:
+      controls:
+        new: Добавить город
+        destroy: Удалить

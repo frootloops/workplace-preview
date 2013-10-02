@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    models:
+      city: Город
+    attributes:
+      city:
+        name: Имя
+        country: Страна
