@@ -1,0 +1,12 @@
+= link_to t("views.service.controls.new"), new_service_path, class: "btn btn-default"
+%table.table.table-striped
+  %thead
+    %tr
+      %td= Service.human_attribute_name(:profile)
+      %td= Service.human_attribute_name(:name)
+  %tbody
+    - @services.each do |service|
+      %tr
+        %td= service.profile
+        %td= link_to service.name, edit_service_path(service)
+        %td= link_to t("views.service.controls.destroy"), service, method: :delete

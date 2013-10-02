@@ -1,0 +1,5 @@
+= simple_form_for @service do |f|
+ = f.input :name
+ = f.input :description
+ = f.input :profile, collection: Service.profiles_for_select
+ = f.button :submit
