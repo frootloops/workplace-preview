@@ -1,0 +1,11 @@
+ru:
+  helpers:
+    submit:
+      country:
+        create: Добавить
+        update: Сохранить
+  views:
+    country:
+      controls:
+        new: Добавить страну
+        destroy: Удалить

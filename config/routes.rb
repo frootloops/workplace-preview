@@ -4,5 +4,6 @@ Workplace::Application.routes.draw do
   resources :places
   resources :users, only: :show
   resources :providers, only: [:create, :destroy]
+  resources :countries, except: :show
   root to: "home#index"
 end
