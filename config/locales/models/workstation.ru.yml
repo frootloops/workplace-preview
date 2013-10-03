@@ -1,0 +1,9 @@
+ru:
+  activerecord:
+    models:
+      workstation: Рабочее место
+    attributes:
+      workstation:
+        name: Название
+        place: Точка
+        service: Услуга

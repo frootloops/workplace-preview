@@ -1,0 +1,12 @@
+ru:
+  helpers:
+    submit:
+      workstation:
+        create: Добавить
+        update: Сохранить
+  views:
+    workstation:
+      controls:
+        new: Добавить рабочее место
+        destroy: Удалить
+        edit: Редактировать
