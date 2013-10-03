@@ -13,5 +13,8 @@ Workplace::Application.routes.draw do
   get "/about" => "home#about", as: :about
   get "/help" => "home#help", as: :help
 
+  get "/about" => "home#about", as: :about
+  get "/help" => "home#help", as: :help
+
   root to: "home#index"
 end
