@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20131003084856) do
+=======
+ActiveRecord::Schema.define(version: 20131003133114) do
+>>>>>>> post model
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +50,13 @@ ActiveRecord::Schema.define(version: 20131003084856) do
   add_index "places", ["city_id"], name: "index_places_on_city_id", using: :btree
   add_index "places", ["owner_id"], name: "index_places_on_owner_id", using: :btree
   add_index "places", ["status_cd"], name: "index_places_on_status_cd", using: :btree
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "providers", force: true do |t|
     t.integer  "user_id"
