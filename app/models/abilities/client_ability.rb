@@ -4,6 +4,7 @@ class ClientAbility < Ability
     place
     user_ability
     provider
+    workstation
   end
 
   private

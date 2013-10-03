@@ -31,4 +31,12 @@ describe ClientAbility do
     it { should_not be_able_to(:destroy, build(:provider)) }
   end
 
+  context Workstation do
+    it { should be_able_to(:read, Workstation) }
+    it { should_not be_able_to(:create, Workstation) }
+    it { should_not be_able_to(:edit, Workstation) }
+    it { should_not be_able_to(:update, Workstation) }
+    it { should_not be_able_to(:destroy, Workstation) }
+  end
+
 end

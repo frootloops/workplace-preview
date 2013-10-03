@@ -2,6 +2,7 @@ class GuestAbility < Ability
   def main
     super
     place
+    workstation
   end
 
   private
@@ -9,4 +10,5 @@ class GuestAbility < Ability
   def place
     can :index, Place
   end
+
 end

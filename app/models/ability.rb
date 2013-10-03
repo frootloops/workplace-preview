@@ -17,4 +17,8 @@ class Ability
   def user
     @_user
   end
+
+  def workstation
+    can :read, Workstation
+  end
 end
