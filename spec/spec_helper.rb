@@ -24,5 +24,6 @@ end
 Capybara.javascript_driver = :webkit
 WebMock.disable_net_connect!(allow_localhost: true)
 
+include ActionDispatch::TestProcess
 include Warden::Test::Helpers
 Warden.test_mode!
