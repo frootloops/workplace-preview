@@ -9,4 +9,8 @@ describe Event do
   describe ".sections" do
     it { expect(Event.sections).to eql(sections) }
   end
+
+  it { should have_many(:event_users).dependent(:destroy) }
+  it { should have_many(:users).through(:event_users) }
+
 end

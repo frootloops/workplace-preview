@@ -3,6 +3,8 @@ require 'spec_helper'
 describe User do
   it { should have_many(:providers).dependent(:destroy) }
   it { should have_many(:places).dependent(:destroy) }
+  it { should have_many(:event_users).dependent(:destroy) }
+  it { should have_many(:events).through(:event_users) }
 
   describe ".roles" do
     it { expect(User.roles).to eql({ admin: 1, client: 0 }) }
