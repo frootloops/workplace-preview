@@ -46,4 +46,11 @@ describe ClientAbility do
     it { should_not be_able_to(:destroy, Event) }
   end
 
+  context EventUser do
+    it { should be_able_to(:index, EventUser) }
+    it { should be_able_to(:create, EventUser) }
+    it { should be_able_to(:destroy, build(:event_user, user: client)) }
+    it { should_not be_able_to(:destroy, build(:event_user)) }
+  end
+
 end
