@@ -1,0 +1,12 @@
+ru:
+  helpers:
+    submit:
+      event:
+        create: Добавить
+        update: Сохранить
+  views:
+    event:
+      controls:
+        new: Добавить cобытие
+        destroy: Удалить
+        edit: Редактировать

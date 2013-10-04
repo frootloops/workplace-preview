@@ -1,0 +1,18 @@
+ru:
+  activerecord:
+    enums:
+      event:
+        sections:
+          master_class: Мастер класс
+          workshop: Семинар
+          lecture: Лекция
+          exhibition: Выставка
+          performance: Перфоманс
+    models:
+      event: Событие
+    attributes:
+      event:
+        section: Тип
+        body: Описание
+        scheduled_at: Время проведения
+        poster: Афиша

@@ -1,0 +1,6 @@
+= simple_form_for @event do |f|
+  = f.input :section, collection: Event.sections_for_select
+  = f.input :body
+  = f.input :scheduled_at, as: :datetime
+  = f.input :poster, as: :file
+  = f.button :submit

@@ -13,7 +13,7 @@ rerun.txt
 tags
 tmp/*
 tmp/**/*
-public/uploads/tmp/
+public/uploads/
 
 config/settings.local.yml
 config/settings/*.local.yml

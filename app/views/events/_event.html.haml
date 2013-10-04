@@ -1,0 +1,8 @@
+.event
+  %h2= event.section
+  %p= image_tag event.poster_url(:medium)
+  %p= simple_format event.body
+  %p= l event.scheduled_at
+  .links
+    = link_to t("views.event.controls.edit"), edit_event_path(event) if can? :edit, event
+    = link_to t("views.event.controls.destroy"), event, method: :delete if can? :destroy, event

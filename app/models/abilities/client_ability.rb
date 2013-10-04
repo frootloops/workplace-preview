@@ -5,6 +5,7 @@ class ClientAbility < Ability
     user_ability
     provider
     workstation
+    event
   end
 
   private

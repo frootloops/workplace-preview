@@ -13,4 +13,12 @@ describe GuestAbility do
     it { should_not be_able_to(:update, Workstation) }
     it { should_not be_able_to(:destroy, Workstation) }
   end
+
+  context Event do
+    it { should be_able_to(:show, Event) }
+    it { should_not be_able_to(:create, Event) }
+    it { should_not be_able_to(:edit, Event) }
+    it { should_not be_able_to(:destroy, Event) }
+  end
+
 end
