@@ -17,6 +17,7 @@ describe Place do
   describe "default values" do
     subject { Place.new }
     it { expect(subject.status).to eql(:draft) }
+    it { expect(subject.time_zone).to eql("UTC") }
   end
 
   describe ".statuses" do

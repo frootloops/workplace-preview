@@ -6,6 +6,7 @@
       %td= Place.human_attribute_name(:address)
       %td= Place.human_attribute_name(:area)
       %td= Place.human_attribute_name(:opening_hours)
+      %td= Place.human_attribute_name(:time_zone)
   %tbody
     - @places.each do |place|
       %tr
@@ -13,4 +14,5 @@
         %td= place.address
         %td= place.area
         %td= place.opening_hours
+        %td= place.time_zone
         %td= link_to t("views.places.controls.destroy"), place, method: :delete
