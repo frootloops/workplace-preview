@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   has_many :places, foreign_key: :owner_id, dependent: :destroy
   has_many :event_users, dependent: :destroy
   has_many :events, through: :event_users
+  has_many :user_services, dependent: :destroy
+  has_many :services, through: :user_services
 
   def password_required?
     (providers.empty? || password.present?) && super
