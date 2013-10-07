@@ -10,5 +10,8 @@ Workplace::Application.routes.draw do
   resources :cities, except: :show
   resources :workstations
 
+  get "/about" => "home#about", as: :about
+  get "/help" => "home#help", as: :help
+
   root to: "home#index"
 end
