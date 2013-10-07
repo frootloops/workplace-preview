@@ -3,6 +3,7 @@ class GuestAbility < Ability
     super
     place
     workstation
+    event
   end
 
   private

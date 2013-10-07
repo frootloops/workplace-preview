@@ -1,0 +1,13 @@
+.event
+  %h2= event.section
+  %p= image_tag event.poster_url(:medium)
+  %p= simple_format event.body
+  %p= l event.scheduled_at
+  - if user_signed_in?
+    = link_to t("views.event.users"), event_event_users_path(event)
+    .actions
+      = event.decorate.link_to_join
+      = event.decorate.link_to_leave
+  .links
+    = link_to t("views.event.controls.edit"), edit_event_path(event) if can? :edit, event
+    = link_to t("views.event.controls.destroy"), event, method: :delete if can? :destroy, event

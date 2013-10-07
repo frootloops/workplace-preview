@@ -5,6 +5,8 @@ class ClientAbility < Ability
     user_ability
     provider
     workstation
+    event
+    event_user
   end
 
   private
@@ -21,6 +23,11 @@ class ClientAbility < Ability
   def provider
     can :create, Provider
     can :destroy, Provider, user_id: user.id
+  end
+
+  def event_user
+    can [:create, :index], EventUser
+    can :destroy, EventUser, user_id: user.id
   end
 
 end

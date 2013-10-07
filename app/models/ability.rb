@@ -21,4 +21,8 @@ class Ability
   def workstation
     can :read, Workstation
   end
+
+  def event
+    can :read, Event
+  end
 end

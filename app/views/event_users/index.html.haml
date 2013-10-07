@@ -1,0 +1,4 @@
+.row-fluid
+  - @event.users.each do |user|
+    %p= user.email
+  = link_to t(:back), :back

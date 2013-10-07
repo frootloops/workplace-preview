@@ -19,6 +19,8 @@ gem 'omniauth-twitter'
 gem 'activerecord-session_store'
 gem 'rails_config'
 gem 'draper'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Assets
 gem 'sass-rails'

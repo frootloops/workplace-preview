@@ -1,5 +1,9 @@
 ru:
   date:
+    order:
+      - year
+      - month
+      - day
     formats:
       default: '%m/%d/%Y'
       with_weekday: '%a %m/%d/%y'
