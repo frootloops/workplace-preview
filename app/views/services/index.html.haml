@@ -7,6 +7,6 @@
   %tbody
     - @services.each do |service|
       %tr
-        %td= service.profile
+        %td= Service.human_enum_name :profiles, service.profile
         %td= link_to service.name, edit_service_path(service)
         %td= link_to t("views.service.controls.destroy"), service, method: :delete
