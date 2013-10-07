@@ -8,6 +8,7 @@ Workplace::Application.routes.draw do
   resources :providers, only: [:create, :destroy]
   resources :countries, except: :show
   resources :cities, except: :show
+  resources :posts, except: :index
   resources :workstations
 
   get "/about" => "home#about", as: :about

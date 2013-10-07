@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    models:
+      post: Запись
+    attributes:
+      post:
+        title: Заголовок
+        body: Текст

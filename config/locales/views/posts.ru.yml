@@ -1,0 +1,12 @@
+ru:
+  helpers:
+    submit:
+      post:
+        create: Опубликовать
+        update: Обновить
+  views:
+    posts:
+      controls:
+        new: Новая запись
+        destroy: Удалить
+        edit: Редактировать
