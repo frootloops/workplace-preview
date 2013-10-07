@@ -5,5 +5,7 @@
   = f.input :opening_hours
   = f.input :status, collection: Place.statuses_for_select
   = f.association :city
+  = f.input :time_zone, collection: ActiveSupport::TimeZone.all, label_method: :to_s, 
+                        value_method: :name, include_blank: false
 
   = f.submit
