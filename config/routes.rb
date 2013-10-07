@@ -9,7 +9,7 @@ Workplace::Application.routes.draw do
   resources :countries, except: :show
   resources :cities, except: :show
   resources :posts, except: :index
-  resources :workstations
+  resources :workstations, except: :show
   resources :events do
     resources :event_users, path: "users", only: [:index, :create, :destroy]
   end

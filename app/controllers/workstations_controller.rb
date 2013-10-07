@@ -1,9 +1,6 @@
 class WorkstationsController < ApplicationController
   load_and_authorize_resource except: [:create]
 
-  def show
-  end
-
   def create
     @workstation = Workstation.new workstation_params
 
@@ -38,5 +35,4 @@ class WorkstationsController < ApplicationController
   def workstation_params
     params.require(:workstation).permit(:name, :service_id, :place_id)
   end
-
 end
