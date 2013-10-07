@@ -1,0 +1,7 @@
+.row-fluid
+  %h2= post.title
+  %p= simple_format post.body
+  - if can? :manage, post
+    %p
+      = link_to t("views.posts.controls.edit"), edit_post_path(post)
+      = link_to t("views.posts.controls.destroy"), post, method: :delete

@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
 
   def about
+    @posts = Post.chronological
   end
 
   def help

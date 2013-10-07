@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20131003084856) do
-=======
-ActiveRecord::Schema.define(version: 20131003133114) do
->>>>>>> post model
+ActiveRecord::Schema.define(version: 20131004123627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +30,27 @@ ActiveRecord::Schema.define(version: 20131003133114) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "event_users", force: true do |t|
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "event_users", ["event_id"], name: "index_event_users_on_event_id", using: :btree
+  add_index "event_users", ["user_id"], name: "index_event_users_on_user_id", using: :btree
+
+  create_table "events", force: true do |t|
+    t.integer  "section_cd"
+    t.text     "body"
+    t.datetime "scheduled_at"
+    t.string   "poster"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["section_cd"], name: "index_events_on_section_cd", using: :btree
 
   create_table "places", force: true do |t|
     t.integer  "city_id"

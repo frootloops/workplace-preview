@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :post do
-    title "Post title"
-    body "Post text"
+    title "Good news everyone"
+    body "Today i want to represent"
   end
 end
