@@ -1,3 +1,16 @@
-= link_to t("views.workstation.controls.new"), new_workstation_path, class: "btn btn-default" if can? :create, Workstation
-.row-fluid
-  = render @workstations
+- if can? :create, Workstation
+  = link_to t("views.workstation.controls.new"), new_workstation_path, class: "btn btn-default"
+
+%table.table.table-striped
+  %thead
+    %tr
+      %td= Workstation.human_attribute_name(:name)
+      %td
+      %td
+  %tbody
+    - @workstations.each do |workstation|
+      %tr
+        %td= workstation.name
+        - if can? :edit, workstation
+          %td= link_to t("views.workstation.controls.edit"), edit_workstation_path(workstation)
+          %td= link_to t("views.workstation.controls.destroy"), workstation, method: :delete

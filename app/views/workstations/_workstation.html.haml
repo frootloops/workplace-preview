@@ -1,4 +1,0 @@
-.row-fluid
-  = workstation.name
-  = link_to t("views.workstation.controls.edit"), edit_workstation_path(workstation) if can? :edit, @workstation
-  = link_to t("views.workstation.controls.destroy"), workstation, method: :delete if can? :destroy, @workstation
