@@ -5,7 +5,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       sign_in current_user, bypass: true
       redirect_to after_update_path_for(current_user)
     else
-      render "edit"
+      render :edit
     end
   end
 
@@ -16,7 +16,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       params[:user].delete("password")
       params[:user].delete("password_confirmation")
     end
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, service_ids: [])
   end
 
  end
