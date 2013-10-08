@@ -21,6 +21,7 @@ gem 'rails_config'
 gem 'draper'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'state_machine'
 
 # Assets
 gem 'sass-rails'
