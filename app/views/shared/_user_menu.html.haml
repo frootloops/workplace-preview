@@ -4,6 +4,7 @@
     %li= link_to t("devise.sign_out"), destroy_user_session_path, method: :delete
   - else
     %li= link_to t("devise.sign_in"), new_user_session_path
+  %li= link_to t("views.menu.masters"), masters_path
   %li= link_to t("views.menu.place"), places_path
   %li= link_to t("views.menu.workstation"), workstations_path
   %li= link_to t("views.menu.events"), events_path

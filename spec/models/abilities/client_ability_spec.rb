@@ -53,4 +53,8 @@ describe ClientAbility do
     it { should_not be_able_to(:destroy, build(:event_user)) }
   end
 
+  context Master do
+    it { should be_able_to(:read, Master) }
+  end
+
 end

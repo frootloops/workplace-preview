@@ -25,4 +25,9 @@ class Ability
   def event
     can :read, Event
   end
+
+  def master
+    can :read, Master
+  end
+
 end
