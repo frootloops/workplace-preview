@@ -7,6 +7,7 @@ class ClientAbility < Ability
     workstation
     event
     event_user
+    master
   end
 
   private

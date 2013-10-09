@@ -21,4 +21,8 @@ describe GuestAbility do
     it { should_not be_able_to(:destroy, Event) }
   end
 
+  context Master do
+    it { should be_able_to(:read, Master) }
+  end
+
 end

@@ -4,6 +4,7 @@ class GuestAbility < Ability
     place
     workstation
     event
+    master
   end
 
   private
