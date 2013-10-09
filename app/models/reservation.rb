@@ -16,7 +16,7 @@ class Reservation < ActiveRecord::Base
   end
 
   def bookable?(datetime)
-    actual_reservations = Reservation.actual.pluck(:id)
+    actual_reservations = workstation.reservations.actual.pluck(:id)
     ReservationTimestamp.exists?(reservation_id: actual_reservations, timestamp: Time.parse(datetime)).nil?
   end
 end
