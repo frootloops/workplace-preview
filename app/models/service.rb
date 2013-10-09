@@ -4,6 +4,7 @@ class Service < ActiveRecord::Base
   has_many :workstations, dependent: :destroy
   has_many :user_services, dependent: :destroy
   has_many :users, through: :user_services
+  has_many :samples, dependent: :destroy
 
   as_enum :profile, [:hairdresser, :visagist, :tailor, :tattoo, :piercing]
 end
