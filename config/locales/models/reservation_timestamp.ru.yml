@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        reservation_timestamp:
+          attributes:
+            timestamp:
+              taken: Дата занята

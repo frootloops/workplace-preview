@@ -6,6 +6,17 @@ class Reservation < ActiveRecord::Base
   
   has_many :timestamps, class_name: :ReservationTimestamp
 
+  scope :actual, -> {}
+
   state_machine initial: :draft do
+  end
+
+  def book(datetime)
+    timestamps.create timestamp: datetime
+  end
+
+  def bookable?(datetime)
+    actual_reservations = Reservation.actual.pluck(:id)
+    ReservationTimestamp.exists?(reservation_id: actual_reservations, timestamp: Time.parse(datetime)).nil?
   end
 end
