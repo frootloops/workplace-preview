@@ -4,7 +4,7 @@ class Reservation < ActiveRecord::Base
   belongs_to :workstation
   belongs_to :master, class_name: :User
   
-  has_many :timestamps, class_name: :ReservationTimestamp
+  has_many :timestamps, dependent: :destroy, class_name: :ReservationTimestamp
 
   scope :actual, -> {}
 
