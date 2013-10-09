@@ -9,6 +9,20 @@ class Reservation < ActiveRecord::Base
   scope :actual, -> {}
 
   state_machine initial: :draft do
+    state :paid
+    state :completed
+
+    event :purchase do
+      transition draft: :paid
+    end
+
+    event :rollback do
+      transition paid: :draft
+    end
+
+    event :complete do
+      transition paid: :completed
+    end
   end
 
   def book(datetime)
