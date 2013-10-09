@@ -8,6 +8,7 @@ class ClientAbility < Ability
     event
     event_user
     master
+    reservation
   end
 
   private
@@ -31,4 +32,7 @@ class ClientAbility < Ability
     can :destroy, EventUser, user_id: user.id
   end
 
+  def reservation
+    can :crud, Reservation, master_id: user.id
+  end
 end

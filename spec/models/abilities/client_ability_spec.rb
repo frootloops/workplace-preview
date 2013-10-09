@@ -57,4 +57,8 @@ describe ClientAbility do
     it { should be_able_to(:read, Master) }
   end
 
+  context Reservation do
+    it { should be_able_to(:crud, create(:reservation, master: client)) }
+    it { should_not be_able_to(:crud, create(:reservation)) }
+  end
 end
