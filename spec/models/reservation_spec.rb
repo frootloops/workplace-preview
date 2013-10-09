@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Reservation do
   let(:reservation) { create :reservation }
+  let(:workstation) { create :workstation }
   let(:some_date) {"1970-01-01 10:00"  }
 
   it { should belong_to(:master) }
@@ -25,12 +26,20 @@ describe Reservation do
       expect(reservation.bookable? some_date).to be_true
     end
 
-    it " return false unavailable date" do
-      bob_reservation = create :reservation
+    it "return false unavailable date" do
+      bob_reservation = create :reservation, workstation: workstation
       bob_reservation.book some_date
       
-      alex_reservation = create :reservation
+      alex_reservation = create :reservation, workstation: workstation
       expect(alex_reservation.bookable? some_date).to be_false
-    end    
+    end
+
+    it "return true for different workstations" do
+      bob_reservation = create :reservation, workstation: create(:workstation)
+      bob_reservation.book some_date
+
+      alex_reservation = create :reservation, workstation: create(:workstation)
+      expect(alex_reservation.bookable? some_date).to be_true
+    end
   end
 end

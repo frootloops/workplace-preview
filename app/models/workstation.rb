@@ -3,4 +3,5 @@ class Workstation < ActiveRecord::Base
 
   belongs_to :place
   belongs_to :service
+  has_many :reservations
 end
