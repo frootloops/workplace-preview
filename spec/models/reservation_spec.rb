@@ -42,4 +42,24 @@ describe Reservation do
       expect(alex_reservation.bookable? some_date).to be_true
     end
   end
+
+  describe "#purchase" do
+    it "from draft to paid" do
+      expect { reservation.purchase! }.to change { reservation.paid? }
+    end
+  end
+
+  describe "#complete" do
+    let(:reservation) { create :reservation, state: :paid }
+    it "from paid to completed" do
+      expect { reservation.complete! }.to change { reservation.completed? }
+    end
+  end
+
+  describe "#rollback" do
+    let(:reservation) { create :reservation, state: :paid }
+    it "from paid to draft" do
+      expect { reservation.rollback! }.to change { reservation.draft? }
+    end
+  end
 end
