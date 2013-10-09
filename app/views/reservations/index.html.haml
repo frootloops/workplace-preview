@@ -1,0 +1,10 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %td= Reservation.human_attribute_name(:state)
+      %td= Reservation.human_attribute_name(:comment)
+  %tbody
+    - @reservations.each do |reservation|
+      %tr
+        %td= reservation.state
+        %td= reservation.comment

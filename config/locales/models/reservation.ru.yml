@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    models:
+      reservation: Бронирование
+    attributes:
+      reservation:
+        state: Статус
+        comment: Комментарий

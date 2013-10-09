@@ -1,5 +1,4 @@
 Workplace::Application.routes.draw do
-
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks",
                                     registrations: "users/registrations" }
   resources :services, expect: :show
@@ -11,6 +10,7 @@ Workplace::Application.routes.draw do
   resources :posts, except: :index
   resources :workstations, except: :show
   resources :masters, only: [:index, :show]
+  resources :reservations, only: :index
   resources :events do
     resources :event_users, path: "users", only: [:index, :create, :destroy]
   end
