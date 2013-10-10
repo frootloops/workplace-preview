@@ -9,11 +9,16 @@ class Reservation < ActiveRecord::Base
   scope :actual, -> {}
 
   state_machine initial: :draft do
+    state :reserved
     state :paid
     state :completed
 
+    event :reserve do
+      transition draft: :reserved
+    end
+
     event :purchase do
-      transition draft: :paid
+      transition reserved: :paid
     end
 
     event :rollback do
