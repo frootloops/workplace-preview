@@ -43,20 +43,27 @@ describe Reservation do
     end
   end
 
-  describe "#purchase" do
-    it "from draft to paid" do
+  describe "#reserve!" do
+    it "from draft to reserved" do
+      expect { reservation.reserve! }.to change { reservation.reserved? }
+    end
+  end
+
+  describe "#purchase!" do
+    let(:reservation) { create :reservation, state: :reserved }
+    it "from reserved to paid" do
       expect { reservation.purchase! }.to change { reservation.paid? }
     end
   end
 
-  describe "#complete" do
+  describe "#complete!" do
     let(:reservation) { create :reservation, state: :paid }
     it "from paid to completed" do
       expect { reservation.complete! }.to change { reservation.completed? }
     end
   end
 
-  describe "#rollback" do
+  describe "#rollback!" do
     let(:reservation) { create :reservation, state: :paid }
     it "from paid to draft" do
       expect { reservation.rollback! }.to change { reservation.draft? }
