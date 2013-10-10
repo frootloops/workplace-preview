@@ -1,0 +1,12 @@
+ru:
+  helpers:
+    submit:
+      promo:
+        create: Опубликовать
+        update: Обновить
+  views:
+    promo:
+      controls:
+        new: Новая акция
+        destroy: Удалить
+        edit: Редактировать

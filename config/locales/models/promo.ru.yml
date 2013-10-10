@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    models:
+      promo: Акция
+    attributes:
+      promo:
+        title: Заголовок
+        body: Текст
+        start_at: Начало
+        end_at: Конец

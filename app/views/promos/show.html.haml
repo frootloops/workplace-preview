@@ -1,0 +1,7 @@
+%h2= @promo.title
+%p= simple_format @promo.body
+%p= l @promo.start_at
+%p= l @promo.end_at
+- if can? :manage, @promo
+  = link_to t("views.promo.controls.edit"), edit_promo_path(@promo)
+  = link_to t("views.promo.controls.destroy"), @promo, method: :delete
