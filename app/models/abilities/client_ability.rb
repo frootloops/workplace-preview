@@ -9,6 +9,7 @@ class ClientAbility < Ability
     event_user
     master
     reservation
+    promo
   end
 
   private

@@ -5,6 +5,7 @@ class GuestAbility < Ability
     workstation
     event
     master
+    promo
   end
 
   private
