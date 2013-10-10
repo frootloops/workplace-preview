@@ -26,4 +26,8 @@ class Ability
     can :read, Event
   end
 
+  def promo
+    can :read, Promo
+  end
+
 end

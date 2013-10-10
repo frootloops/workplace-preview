@@ -25,4 +25,8 @@ describe GuestAbility do
     it { should be_able_to(:read, Master) }
   end
 
+  context Promo do
+    it { should be_able_to(:read, Promo) }
+  end
+
 end
