@@ -3,4 +3,6 @@ class Sample < ActiveRecord::Base
 
   belongs_to :master
   belongs_to :service
+
+  mount_uploader :file, FileUploader
 end

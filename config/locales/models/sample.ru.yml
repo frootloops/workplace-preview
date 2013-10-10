@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    models:
+      sample: Работа
+    attributes:
+      sample:
+        file: Изображение
+        service: Скилл

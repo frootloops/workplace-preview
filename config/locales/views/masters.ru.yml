@@ -1,0 +1,12 @@
+ru:
+  helpers:
+    submit:
+      master:
+        update: Сохранить
+  views:
+    masters:
+      portfolio: Портфолио
+      add_sample: Добавить работу
+      remove_sample: Удалить работу
+      controls:
+        edit: Редактировать

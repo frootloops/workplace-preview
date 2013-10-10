@@ -35,4 +35,9 @@ class ClientAbility < Ability
   def reservation
     can :crud, Reservation, master_id: user.id
   end
+
+  def master
+    can :read, Master
+    can [:edit, :update], Master, id: user.id
+  end
 end
