@@ -1,2 +1,6 @@
 %h4= @master.email
-%p= @services.pluck(:name).join(", ")
+- @samples.each do |sample|
+  .sample
+    %h5= sample.service.name
+    = image_tag sample.file_url(:medium)
+%p= link_to t("views.masters.controls.edit"), edit_master_path(@master) if can? :edit, @master

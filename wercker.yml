@@ -16,7 +16,7 @@ build:
           code: bundle exec rake db:schema:load
       - script:
           name: rspec
-          code: bundle exec rspec
+          code: xvfb-run bundle exec rake
 deploy:
     steps:
         - heroku-deploy

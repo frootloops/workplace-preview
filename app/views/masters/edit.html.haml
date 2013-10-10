@@ -1,0 +1,8 @@
+= simple_form_for @master do |f|
+  %h3= t("views.masters.portfolio")
+  #samples
+    = f.simple_fields_for :samples do |sample|
+      = render 'sample_fields', f: sample
+    .links
+      = link_to_add_association t("views.masters.add_sample"), f, :samples
+  = f.button :submit

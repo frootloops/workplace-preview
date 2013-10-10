@@ -13,4 +13,8 @@ class GuestAbility < Ability
     can :index, Place
   end
 
+  def master
+    can :read, Master
+  end
+
 end

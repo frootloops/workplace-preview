@@ -12,4 +12,11 @@ describe Master do
     end
   end
 
+  describe ".find_by_user!" do
+    it "return not readonly instance" do
+      master = create(:master)
+      expect(Master.find_by_user!(master.id)).to_not be_readonly
+    end
+  end
+
 end

@@ -54,7 +54,17 @@ describe ClientAbility do
   end
 
   context Master do
+    let(:master) { create :master }
+    subject { AbilityFactory.build master }
     it { should be_able_to(:read, Master) }
+    context "for own master" do
+      it { should be_able_to(:edit, master) }
+      it { should be_able_to(:update, master) }
+    end
+    context "for other master" do
+      it { should_not be_able_to(:edit, build(:master)) }
+      it { should_not be_able_to(:update, build(:master)) }
+    end
   end
 
   context Reservation do

@@ -30,6 +30,7 @@ gem 'coffee-rails'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: :bootstrap3
+gem 'cocoon'
 
 group :development do
   gem 'binding_of_caller'
