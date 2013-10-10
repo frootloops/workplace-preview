@@ -13,6 +13,8 @@ feature "Master", js: true do
   context "with valid attributes" do
     scenario "update portfolio" do
       choose "Best haircut"
+      attach_file I18n.t("activerecord.attributes.sample.file"),
+                  Rails.root.join('spec', 'images', 'photo.jpg')
       click_button I18n.t("helpers.submit.master.update")
       expect(page).to have_content "Best haircut"
     end
