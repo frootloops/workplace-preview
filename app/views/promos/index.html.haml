@@ -1,0 +1,15 @@
+= link_to t("views.promo.controls.new"), new_promo_path, class: "btn btn-default" if can? :create, Promo
+%table.table.table-striped
+  %thead
+    %tr
+      %td= Promo.human_attribute_name(:title)
+      %td= Promo.human_attribute_name(:body)
+      %td= Promo.human_attribute_name(:start_at)
+      %td= Promo.human_attribute_name(:end_at)
+  %tbody
+    - @promos.each do |promo|
+      %tr
+        %td= link_to promo.title, promo
+        %td= simple_format promo.body
+        %td= l promo.start_at
+        %td= l promo.end_at

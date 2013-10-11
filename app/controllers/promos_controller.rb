@@ -12,7 +12,7 @@ class PromosController < ApplicationController
     @promo = Promo.new promo_params
 
     if @promo.save
-      redirect_to about_path
+      redirect_to promos_path
     else
       render :new
     end
@@ -20,7 +20,7 @@ class PromosController < ApplicationController
 
   def update
     if @promo.update promo_params
-      redirect_to about_path
+      redirect_to promos_path
     else
       render :edit
     end
@@ -28,7 +28,7 @@ class PromosController < ApplicationController
 
   def destroy
     @promo.destroy
-    redirect_to :back
+    redirect_to promos_path
   end
 
   def edit
